@@ -23,14 +23,18 @@ const playgame =(userchoice) => {
     if(userchoice===compchoice){
         drawgame();
     }else{
-        let userwin = true;
-        if(userwin==="ROCK"){
-            userwin = compchoice  === "PAPER" ? false : true; 
-        }else if(userwin==="PAPER"){
-            userwin = compchoice  === "SCISSOR" ? false : true;
-        }else{
-            userwin = compchoice  === "ROCK" ? false : true;
-        }
+
+         let userWin = true;
+    if (userChoice === "ROCK") {
+      //scissors, paper
+      userWin = compChoice === "PAPER" ? false : true;
+    } else if (userChoice === "PAPER") {
+      //rock, scissors
+      userWin = compChoice === "SCISSOR" ? false : true;
+    } else {
+      //rock, paper
+      userWin = compChoice === "ROCK" ? false : true;
+    }
         showwinner(userwin , userchoice, compchoice);
      }
     }
